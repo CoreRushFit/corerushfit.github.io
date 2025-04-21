@@ -1,0 +1,190 @@
+/* Variables */
+:root {
+    --primary-gradient: linear-gradient(135deg, #4a6fa5, #6b8cae);
+    --background-gradient: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    --text-primary: #2c3e50;
+    --text-secondary: #5c6b7f;
+    --white: #fff;
+    --shadow-sm: 0 10px 30px rgba(0, 0, 0, 0.03);
+    --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.05);
+    --border-radius: 16px;
+    --transition: all 0.3s ease;
+    --coming-soon-gradient: linear-gradient(135deg, #4a6fa5, #6b8cae);
+}
+
+/* Base Styles */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: var(--background-gradient);
+    color: var(--text-primary);
+}
+
+/* Header */
+header {
+    background: var(--primary-gradient);
+    color: var(--white);
+    padding: 1.5rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/></svg>') repeat;
+    opacity: 0.1;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    font-size: 3rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header p {
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Sections */
+section {
+    padding: 1.5rem 2rem;
+    margin: 1rem auto;
+    background-color: var(--white);
+    max-width: 900px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-gradient);
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+section h2 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--primary-gradient);
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+section p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--text-secondary), transparent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    section {
+        margin: 0.75rem;
+        padding: 1.25rem;
+        border-radius: 12px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Coming Soon Section */
+#coming-soon {
+    background: var(--coming-soon-gradient);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+#coming-soon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/></svg>') repeat;
+    opacity: 0.1;
+}
+
+#coming-soon h2 {
+    color: var(--white);
+    font-size: 2.2rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#coming-soon p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+#coming-soon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}

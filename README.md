@@ -1,2 +1,2 @@
-# corerushfit.github.io
+# Core Rush Fit
 The SPA for the domain
