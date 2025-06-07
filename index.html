@@ -265,37 +265,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        document.querySelector('.contact-form form').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            const name = document.querySelector('input[type="text"]').value;
-            const email = document.querySelector('input[type="email"]').value;
-            
-            try {
-                const response = await fetch('http://localhost:8080/public/api/waitlist', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ name, email })
-                });
-                
-                const data = await response.json();
-                
-                if (response.ok) {
-                    alert('Successfully joined the waitlist!');
-                    e.target.reset();
-                } else {
-                    alert(data.message || 'Failed to join waitlist. Please try again.');
-                }
-            } catch (error) {
-                alert('An error occurred. Please try again later.');
-                console.error('Error:', error);
-            }
-        });
-    </script>
 </body>
 
 </html>
