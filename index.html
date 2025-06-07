@@ -215,12 +215,15 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form>
+                    <form action="https://formspree.io/f/mzzgdwbj" method="POST">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input name="fullname" type="text" placeholder="Your Full Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <input name="email" type="email" placeholder="Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address" required>
+                        </div>
+                        <div class="form-group">
+                            <input name="phone" placeholder="Your Phone Number (without country code)" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" required>
                         </div>
                         <button type="submit" class="cta-button">Join Waitlist</button>
                     </form>
