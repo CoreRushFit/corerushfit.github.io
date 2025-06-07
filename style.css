@@ -111,7 +111,7 @@ body {
 
 .hero-content {
     max-width: 800px;
-    padding: 0 2rem;
+    padding: 1rem;
 }
 
 .hero-content h1 {
@@ -532,6 +532,10 @@ footer {
         display: none;
     }
     
+    .hero-content {
+        margin-top: 8rem;
+    }
+    
     .hero-content h1 {
         font-size: 2.5rem;
     }
@@ -553,7 +557,7 @@ footer {
     }
     
     .section-header h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     
     .footer-content {
