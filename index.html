@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoreRush.Fit - Premium Class Booking Platform</title>
+    <title>CoreRush.Fit - All Your Favorite Classes. One Simple Membership.</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFEHF49RBC"></script>
@@ -20,48 +19,92 @@
 </head>
 
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">CoreRush.Fit</div>
             <div class="nav-links">
                 <a href="#about">About</a>
-                <a href="#how-it-works">How It Works</a>
                 <a href="#classes">Classes</a>
                 <a href="#partners">Partners</a>
-                <a href="#contact" class="cta-link">Sign Up</a>
+                <a href="#contact" class="cta-nav">Sign Up</a>
             </div>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <header class="hero">
-        <div class="hero-content">
-            <h1>All Your Favorite Classes. One Simple Membership.</h1>
-            <p class="hero-subtitle">From fitness to fun, discover and book sessions at the best studios in your city.</p>
-            <a href="#contact" class="cta-button">Start Your Free Trial</a>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-tag">India's Premier Class Platform</p>
+                    
+                    <h1 class="hero-title">
+                        All Your Favorite 
+                        <span class="highlight">Classes</span><br>
+                        One Simple 
+                        <span class="highlight">Membership</span>
+                    </h1>
+                    
+                    <p class="hero-subtitle">
+                        From fitness to fun, discover and book sessions at the best studios in your city.
+                    </p>
+                    
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn-primary">Start Your Free Trial</a>
+                        <a href="#about" class="btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <!-- Abstract Visual Elements -->
+                    <div class="visual-element circle-1"></div>
+                    <div class="visual-element circle-2"></div>
+                    <div class="visual-element square-1"></div>
+                    
+                    <!-- Feature Cards -->
+                    <div class="floating-card card-1">
+                        <div class="card-icon">🏋️</div>
+                        <h4>Unlimited Access</h4>
+                        <p>All studios, one membership</p>
+                    </div>
+                    
+                    <div class="floating-card card-2">
+                        <div class="card-icon">📅</div>
+                        <h4>Easy Booking</h4>
+                        <p>Reserve with just a few taps</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="hero-overlay"></div>
     </header>
 
+    <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">About CoreRush.Fit</span>
-                <h2>India's All-in-One Class Booking Platform</h2>
-                <p class="section-subtitle">We connect you to the best studios and experiences in your city. One app, endless possibilities.</p>
+                <h2>India's All-in-One 
+                    <span class="highlight">Class Booking</span> Platform
+                </h2>
+                <p class="section-subtitle">
+                    We connect you to the best studios and experiences in your city. One app, endless possibilities.
+                </p>
             </div>
-            <div class="features">
-                <div class="feature">
-                    <div class="feature-icon"><i class="fas fa-calendar-check"></i></div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-number">01</div>
                     <h3>Book Any Class</h3>
                     <p>From fitness to cooking, find and book classes that fit your lifestyle and interests.</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon"><i class="fas fa-users"></i></div>
+                <div class="feature-card">
+                    <div class="feature-number">02</div>
                     <h3>Partner Studios</h3>
                     <p>Access top studios and gyms across the city with a single subscription.</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon"><i class="fas fa-infinity"></i></div>
+                <div class="feature-card">
+                    <div class="feature-number">03</div>
                     <h3>Unlimited Access</h3>
                     <p>Attend as many classes as you want with our flexible monthly plans.</p>
                 </div>
@@ -69,26 +112,34 @@
         </div>
     </section>
 
+    <!-- How It Works -->
     <section id="how-it-works" class="section section-alt">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">How It Works</span>
-                <h2>Simple, Seamless, Social</h2>
+                <h2>Simple, Seamless, <span class="highlight">Social</span></h2>
                 <p class="section-subtitle">Get started in three easy steps</p>
             </div>
-            <div class="features">
-                <div class="feature">
-                    <div class="feature-icon"><i class="fas fa-search"></i></div>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-visual">
+                        <div class="step-number">1</div>
+                    </div>
                     <h3>Browse</h3>
                     <p>Explore a wide range of classes and experiences from our partner studios.</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon"><i class="fas fa-calendar-plus"></i></div>
+                <div class="step-card">
+                    <div class="step-visual">
+                        <div class="step-number">2</div>
+                    </div>
                     <h3>Book</h3>
                     <p>Reserve your spot instantly with just a few taps.</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon"><i class="fas fa-smile-beam"></i></div>
+                <div class="step-card">
+                    <div class="step-visual">
+                        <div class="step-number">3</div>
+                    </div>
                     <h3>Attend</h3>
                     <p>Show up, check in, and enjoy your class. Repeat as often as you like!</p>
                 </div>
@@ -96,132 +147,130 @@
         </div>
     </section>
 
+    <!-- Classes Section -->
     <section id="classes" class="section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Available Classes</span>
-                <h2>Something for Everyone</h2>
-                <p class="section-subtitle">Choose from a variety of classes to match your mood and goals</p>
+                <h2>Something for <span class="highlight">Everyone</span></h2>
+                <p class="section-subtitle">
+                    Choose from a variety of classes to match your mood and goals
+                </p>
             </div>
-            <div class="programs">
-                <div class="program">
-                    <div class="program-header">
-                        <i class="fas fa-dumbbell"></i>
-                        <h3>Gym & Fitness</h3>
-                    </div>
+            
+            <div class="classes-grid">
+                <div class="class-card">
+                    <div class="class-icon">🏋️</div>
+                    <h3>Gym & Fitness</h3>
                     <p>Strength, conditioning, and functional training sessions at top gyms.</p>
                 </div>
-                <div class="program">
-                    <div class="program-header">
-                        <i class="fas fa-child"></i>
-                        <h3>Dance</h3>
-                    </div>
+                <div class="class-card">
+                    <div class="class-icon">💃</div>
+                    <h3>Dance</h3>
                     <p>From Bollywood to hip-hop, join group dance classes for all levels.</p>
                 </div>
-                <div class="program">
-                    <div class="program-header">
-                        <i class="fas fa-spa"></i>
-                        <h3>Yoga & Pilates</h3>
-                    </div>
+                <div class="class-card">
+                    <div class="class-icon">🧘</div>
+                    <h3>Yoga & Pilates</h3>
                     <p>Relax, stretch, and strengthen with expert-led yoga and pilates sessions.</p>
                 </div>
-                <div class="program">
-                    <div class="program-header">
-                        <i class="fas fa-utensils"></i>
-                        <h3>Cooking</h3>
-                    </div>
+                <div class="class-card">
+                    <div class="class-icon">👨‍🍳</div>
+                    <h3>Cooking</h3>
                     <p>Learn new recipes and culinary skills in hands-on cooking classes.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Partners Section -->
     <section id="partners" class="section section-alt">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Our Partners</span>
-                <h2>Top Studios & Gyms</h2>
-                <p class="section-subtitle">We partner with the best to bring you quality experiences</p>
+                <h2>Top <span class="highlight">Studios</span> & Gyms</h2>
+                <p class="section-subtitle">
+                    We partner with the best to bring you quality experiences
+                </p>
             </div>
-            <div class="facility-features">
-                <div class="facility-feature">
-                    <i class="fas fa-dumbbell"></i>
+            
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <div class="partner-icon">🏋️</div>
                     <h4>Elite Gyms</h4>
                     <p>Access premium fitness centers in your city.</p>
                 </div>
-                <div class="facility-feature">
-                    <i class="fas fa-spa"></i>
+                <div class="partner-card">
+                    <div class="partner-icon">🧘</div>
                     <h4>Yoga Studios</h4>
                     <p>Practice with certified instructors in serene environments.</p>
                 </div>
-                <div class="facility-feature">
-                    <i class="fas fa-child"></i>
+                <div class="partner-card">
+                    <div class="partner-icon">💃</div>
                     <h4>Dance Academies</h4>
                     <p>Join vibrant dance communities and learn from the best.</p>
                 </div>
-                <div class="facility-feature">
-                    <i class="fas fa-utensils"></i>
+                <div class="partner-card">
+                    <div class="partner-icon">👨‍🍳</div>
                     <h4>Cooking Schools</h4>
-                    <p>Master new cuisines with hands-on classes.</p>
+                    <p>Master new cuisines with hands-on cooking classes.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section section-alt">
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
         <div class="container">
-            <div class="contact-content">
-                <div class="contact-text">
-                    <h2>Sign Up for Early Access</h2>
+            <div class="contact-container">
+                <div class="contact-content">
+                    <span class="section-tag">Early Access</span>
+                    <h2>Sign Up for <span class="highlight">Early Access</span></h2>
                     <p>Be the first to experience the new way to discover and book classes. Early bird offers for first subscribers!</p>
-                    <div class="contact-features">
-                        <div class="contact-feature">
-                            <i class="fas fa-check-circle"></i>
+                    
+                    <div class="contact-benefits">
+                        <div class="benefit">
+                            <div class="benefit-icon">✅</div>
                             <span>Exclusive Launch Benefits</span>
                         </div>
-                        <div class="contact-feature">
-                            <i class="fas fa-check-circle"></i>
+                        <div class="benefit">
+                            <div class="benefit-icon">✅</div>
                             <span>Unlimited Classes</span>
                         </div>
-                        <div class="contact-feature">
-                            <i class="fas fa-check-circle"></i>
+                        <div class="benefit">
+                            <div class="benefit-icon">✅</div>
                             <span>Partner Studio Access</span>
                         </div>
                     </div>
                 </div>
+                
                 <div class="contact-form">
                     <form action="https://formspree.io/f/mzzgdwbj" method="POST">
                         <div class="form-group">
                             <input name="full_name" type="text" placeholder="Your Full Name" required>
                         </div>
                         <div class="form-group">
-                            <input name="email" type="email" placeholder="Your Email" title="Please enter a valid email address" required>
+                            <input name="email" type="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input name="phone" placeholder="Your Phone Number (without country code)" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" required>
+                            <input name="phone" placeholder="Your Phone Number" pattern="[0-9]{10}" required>
                         </div>
-                        <button type="submit" class="cta-button">Sign Up</button>
+                        <button type="submit" class="btn-primary full-width">Sign Up for Early Access</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-    
-    <script>
-        window.onbeforeunload = () => {
-            for(const form of document.getElementsByTagName('form')) {
-                form.reset();
-            }
-        }
-    </script>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>CoreRush.Fit</h3>
                     <p>Empowering Your Discovery Journey</p>
                 </div>
+                
                 <div class="footer-links">
                     <div class="footer-column">
                         <h4>Explore</h4>
@@ -237,15 +286,24 @@
                     </div>
                     <div class="footer-column">
                         <h4>Connect</h4>
-                        <a href="https://instagram.com/corerush.fit"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://instagram.com/corerush.fit" target="_blank">Instagram</a>
                     </div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2025 CoreRush.Fit. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        window.onbeforeunload = () => {
+            for(const form of document.getElementsByTagName('form')) {
+                form.reset();
+            }
+        }
+    </script>
 </body>
 
 </html>
