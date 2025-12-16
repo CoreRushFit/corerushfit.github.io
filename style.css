@@ -85,6 +85,14 @@ body {
     padding: 0.875rem 0;
     text-align: center;
     box-shadow: var(--shadow-medium);
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.beta-banner:hover {
+    opacity: 0.95;
 }
 
 .beta-banner-content {
@@ -124,6 +132,16 @@ body {
 
 .beta-link:hover {
     text-decoration: underline;
+}
+
+.banner-arrow {
+    display: inline-block;
+    margin-left: 0.5rem;
+    transition: var(--transition);
+}
+
+.beta-banner:hover .banner-arrow {
+    transform: translateX(4px);
 }
 
 /* Navigation */
@@ -190,7 +208,7 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 12rem 0 6rem;
+    padding: 12rem 0 2rem;
     background: var(--background-default);
     overflow: hidden;
     position: relative;
@@ -244,6 +262,53 @@ body {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0rem;
+    text-align: center;
+}
+
+.scroll-mouse {
+    width: 30px;
+    height: 50px;
+    border: 2px solid var(--text-primary);
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+}
+
+.scroll-wheel {
+    width: 4px;
+    height: 10px;
+    background: var(--primary-orange);
+    border-radius: 2px;
+    animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+}
+
+.scroll-text {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin: 0;
 }
 
 .btn-primary {
