@@ -897,7 +897,7 @@ body {
 /* Studio Contact Card */
 .studio-contact-card {
     background: white;
-    padding: 3rem;
+    padding: 2rem;
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-medium);
     text-align: center;
@@ -905,9 +905,17 @@ body {
 }
 
 .contact-card-icon {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     display: block;
+    text-align: center;
+}
+
+.mascot-image {
+    width: 140px;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 .studio-contact-card h3 {
@@ -1153,15 +1161,17 @@ body {
 /* Footer */
 .footer {
     background: var(--text-primary);
-    padding: 4rem 0 2rem;
+    padding: 3rem 0 1.5rem;
     color: var(--text-inverse);
 }
 
 .footer-content {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    gap: 4rem;
-    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .footer-brand h3 {
@@ -1172,45 +1182,34 @@ body {
     letter-spacing: -0.02em;
 }
 
-.footer-brand p {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 1rem;
-}
-
-.footer-links {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.footer-links-minimal {
+    display: flex;
     gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.footer-column h4 {
-    color: var(--text-inverse);
-    margin-bottom: 1.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.footer-column a {
-    display: block;
+.footer-social,
+.footer-link {
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-    margin-bottom: 0.75rem;
     font-size: 0.95rem;
     transition: var(--transition);
 }
 
-.footer-column a:hover {
+.footer-social:hover,
+.footer-link:hover {
     color: var(--primary-orange);
 }
 
+
 .footer-bottom {
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.875rem;
+    margin-top: 1rem;
 }
 
 /* Responsive Design */
@@ -1343,13 +1342,12 @@ body {
     }
     
     .footer-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        flex-direction: column;
+        text-align: center;
     }
     
-    .footer-links {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+    .footer-links-minimal {
+        justify-content: center;
     }
     
     .contact-form {
@@ -1379,6 +1377,32 @@ body {
 .privacy-content {
     max-width: 1000px;
     margin: 0 auto;
+}
+
+.privacy-content-simple {
+    max-width: 100%;
+}
+
+.privacy-section-simple {
+    margin-bottom: 3rem;
+}
+
+.privacy-section-simple h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.privacy-section-simple p {
+    color: var(--text-primary);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.privacy-section-simple ul {
+    color: var(--text-secondary);
+    line-height: 1.8;
 }
 
 .privacy-card {

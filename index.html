@@ -81,11 +81,10 @@
     </header>
 
     <!-- Scroll Indicator -->
-    <div class="scroll-indicator">
+    <div class="scroll-indicator" id="scrollIndicator">
         <div class="scroll-mouse">
             <div class="scroll-wheel"></div>
         </div>
-        <p class="scroll-text">Scroll to explore</p>
     </div>
 
     <!-- About Section -->
@@ -269,7 +268,9 @@
                 </div>
                 
                 <div class="studio-contact-card">
-                    <div class="contact-card-icon">📧</div>
+                    <div class="contact-card-icon">
+                        <img src="assets/mascot_contactus.png" alt="Contact us mascot" class="mascot-image">
+                    </div>
                     <h3>Get in Touch</h3>
                     <p>Interested in partnering with us? Send us an email and we'll get back to you within 24 hours.</p>
                     <a href="mailto:support@corerush.fit" class="contact-email-btn">
@@ -289,26 +290,11 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>CoreRush.Fit</h3>
-                    <p>Empowering Your Discovery Journey</p>
                 </div>
                 
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Explore</h4>
-                        <a href="#classes">Classes</a>
-                        <a href="#how-it-works">How It Works</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Company</h4>
-                        <a href="#about">About Us</a>
-                        <a href="#studios">For Studios</a>
-                        <a href="privacy-policy.html">Privacy Policy</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Connect</h4>
-                        <a href="https://instagram.com/corerush.fit" target="_blank">Instagram</a>
-                        <a href="#download">Download App</a>
-                    </div>
+                <div class="footer-links-minimal">
+                    <a href="https://instagram.com/corerush.fit" target="_blank" class="footer-social">Instagram</a>
+                    <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
                 </div>
             </div>
             
@@ -324,6 +310,21 @@
                 form.reset();
             }
         }
+
+        // Hide scroll indicator on scroll
+        let scrollIndicator = document.getElementById('scrollIndicator');
+        let hasScrolled = false;
+
+        window.addEventListener('scroll', () => {
+            if (!hasScrolled && window.scrollY > 50) {
+                hasScrolled = true;
+                scrollIndicator.style.opacity = '0';
+                scrollIndicator.style.transition = 'opacity 0.5s ease-out';
+                setTimeout(() => {
+                    scrollIndicator.style.display = 'none';
+                }, 500);
+            }
+        }, { passive: true });
     </script>
 </body>
 
