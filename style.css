@@ -33,6 +33,11 @@
     --border-radius-full: 9999px;
     
     --transition: all 0.3s ease;
+    
+    /* Checkbox Variables */
+    --cr-accent: #FF6B35;
+    --cr-border: rgba(45, 55, 72, 0.3);
+    --cr-bg: rgba(237, 242, 247, 0.5);
 }
 
 /* Reset & Base Styles */
@@ -40,6 +45,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: 8rem;
 }
 
 body {
@@ -64,10 +73,63 @@ body {
     background-clip: text;
 }
 
+/* Beta Announcement Banner */
+.beta-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    background: var(--gradient-primary);
+    color: var(--text-inverse);
+    padding: 0.875rem 0;
+    text-align: center;
+    box-shadow: var(--shadow-medium);
+}
+
+.beta-banner-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.beta-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.375rem 0.875rem;
+    border-radius: var(--border-radius-full);
+    font-weight: 600;
+    font-size: 0.875rem;
+    white-space: nowrap;
+}
+
+.beta-banner-content p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.beta-link {
+    color: var(--text-inverse);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.beta-link:hover {
+    text-decoration: underline;
+}
+
 /* Navigation */
 .navbar {
     position: fixed;
-    top: 0;
+    top: 3.5rem;
     left: 0;
     right: 0;
     z-index: 1000;
@@ -128,7 +190,7 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 8rem 0 6rem;
+    padding: 12rem 0 6rem;
     background: var(--background-default);
     overflow: hidden;
     position: relative;
@@ -536,6 +598,175 @@ body {
     line-height: 1.6;
 }
 
+/* Download Section */
+.download-section {
+    background: linear-gradient(135deg, var(--background-alt) 0%, var(--background-default) 100%);
+    padding: 8rem 0;
+}
+
+.download-hero {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.download-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.download-text-content {
+    max-width: 600px;
+}
+
+.download-text-content h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.download-description {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+
+.download-stats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-orange);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.app-download-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.app-download-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    background: var(--text-primary);
+    color: var(--text-inverse);
+    border-radius: var(--border-radius-md);
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: var(--shadow-medium);
+    min-width: 180px;
+}
+
+.app-download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-strong);
+    background: var(--primary-orange);
+}
+
+.app-store-icon,
+.play-store-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.app-download-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.app-download-label {
+    font-size: 0.75rem;
+    opacity: 0.9;
+    line-height: 1;
+}
+
+.app-download-store {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.download-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.phone-mockup {
+    width: 280px;
+    height: 560px;
+    background: var(--text-primary);
+    border-radius: 2.5rem;
+    padding: 0.75rem;
+    box-shadow: var(--shadow-strong);
+    position: relative;
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    background: var(--background-default);
+    border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.screen-content {
+    padding: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.app-preview-header {
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: var(--border-radius-md);
+    opacity: 0.8;
+}
+
+.app-preview-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+}
+
+.preview-card {
+    height: 100px;
+    background: var(--background-accent);
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--neutral-200);
+}
+
 /* Contact Section */
 .contact-section {
     background: var(--background-alt);
@@ -548,6 +779,16 @@ body {
     align-items: start;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.download-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.download-content {
+    text-align: center;
+    max-width: 800px;
 }
 
 .contact-content h2 {
@@ -587,6 +828,109 @@ body {
     color: var(--text-primary);
 }
 
+/* App Download Buttons */
+/* Studio Contact Card */
+.studio-contact-card {
+    background: white;
+    padding: 3rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-medium);
+    text-align: center;
+    max-width: 500px;
+}
+
+.contact-card-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.studio-contact-card h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.studio-contact-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.contact-email-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: var(--gradient-primary);
+    color: var(--text-inverse);
+    border-radius: var(--border-radius-full);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.125rem;
+    transition: var(--transition);
+    box-shadow: var(--shadow-button);
+}
+
+.contact-email-btn:hover {
+    background: var(--gradient-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-button-hover);
+}
+
+.contact-email-btn svg {
+    transition: var(--transition);
+}
+
+.contact-email-btn:hover svg {
+    transform: translateX(4px);
+}
+
+.app-download-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: var(--text-primary);
+    color: var(--text-inverse);
+    border-radius: var(--border-radius-md);
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: var(--shadow-soft);
+    min-width: 180px;
+}
+
+.app-download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+    background: var(--primary-orange);
+}
+
+.app-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.app-download-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.app-download-label {
+    font-size: 0.75rem;
+    opacity: 0.9;
+    line-height: 1;
+}
+
+.app-download-store {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
 /* Form Styles */
 .contact-form {
     background: white;
@@ -611,14 +955,50 @@ body {
     transition: var(--transition);
 }
 
-.form-group input:focus {
+.form-group input:focus,
+.form-group textarea:focus {
     outline: none;
     border-color: var(--primary-orange);
     box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
 }
 
-.form-group input::placeholder {
+.form-group input::placeholder,
+.form-group textarea::placeholder {
     color: var(--text-secondary);
+}
+
+/* Custom Checkbox Styles */
+.cr-checkbox {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.cr-checkbox .box {
+    fill: var(--cr-bg);
+    stroke: var(--cr-border);
+    stroke-width: 1.5;
+}
+
+.cr-checkbox--checked .box,
+.cr-checkbox--indeterminate .box {
+    fill: var(--cr-accent);
+    stroke: rgba(0, 0, 0, 0.06);
+}
+
+.cr-checkbox .tick,
+.cr-checkbox .dash {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2.3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Optional: hover/focus feel */
+.cr-checkbox:hover .box {
+    stroke: color-mix(in srgb, var(--cr-accent) 55%, var(--cr-border));
 }
 
 .full-width {
@@ -770,6 +1150,10 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+    .navbar {
+        top: 3.5rem;
+    }
+
     .hero-content {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -784,9 +1168,46 @@ body {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
+
+    .download-content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .download-visual {
+        order: -1;
+    }
+
+    .download-stats {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 768px) {
+    html {
+        scroll-padding-top: 6rem;
+    }
+
+    .beta-banner-content {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .beta-banner-content p {
+        font-size: 0.875rem;
+    }
+
+    .navbar {
+        top: 3.5rem;
+    }
+
+    .hero {
+        padding: 6rem 0 4rem;
+        margin-top: 0;
+    }
+    
     .nav-container {
         padding: 1rem;
     }
@@ -795,8 +1216,34 @@ body {
         display: none;
     }
     
-    .hero {
-        padding: 6rem 0 4rem;
+    .app-download-buttons {
+        flex-direction: column;
+    }
+
+    .app-download-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .download-section {
+        padding: 4rem 0;
+    }
+
+    .download-stats {
+        gap: 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .phone-mockup {
+        width: 240px;
+        height: 480px;
+    }
+
+    .studio-contact-card {
+        padding: 2rem;
     }
     
     .hero-tag {

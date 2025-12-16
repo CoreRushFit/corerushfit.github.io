@@ -19,6 +19,14 @@
 </head>
 
 <body>
+    <!-- Announcement Banner -->
+    <div class="beta-banner">
+        <div class="beta-banner-content">
+            <span class="beta-badge">🎉 Now Available</span>
+            <p>Book classes at top studios across your city</p>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -26,8 +34,8 @@
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#classes">Classes</a>
-                <a href="#partners">Partners</a>
-                <a href="#contact" class="cta-nav">Sign Up</a>
+                <a href="#studios">For Studios</a>
+                <a href="#download" class="cta-nav">Download App</a>
             </div>
         </div>
     </nav>
@@ -37,21 +45,21 @@
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <p class="hero-tag">India's Premier Class Platform</p>
+                    <p class="hero-tag">Available on App Store & Google Play</p>
                     
                     <h1 class="hero-title">
                         All Your Favorite 
                         <span class="highlight">Classes</span><br>
                         One Simple 
-                        <span class="highlight">Membership</span>
+                        <span class="highlight">App</span>
                     </h1>
                     
                     <p class="hero-subtitle">
-                        From fitness to fun, discover and book sessions at the best studios in your city.
+                        Discover fitness, dance, yoga, cooking, and more. One membership, unlimited classes at partner studios near you.
                     </p>
                     
                     <div class="hero-cta">
-                        <a href="#contact" class="btn-primary">Start Your Free Trial</a>
+                        <a href="#download" class="btn-primary">Get Started</a>
                         <a href="#about" class="btn-secondary">Learn More</a>
                     </div>
                 </div>
@@ -183,80 +191,107 @@
         </div>
     </section>
 
-    <!-- Partners Section -->
-    <section id="partners" class="section section-alt">
+    <!-- Download Section -->
+    <section id="download" class="section download-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Our Partners</span>
-                <h2>Top <span class="highlight">Studios</span> & Gyms</h2>
-                <p class="section-subtitle">
-                    We partner with the best to bring you quality experiences
-                </p>
-            </div>
-            
-            <div class="partners-grid">
-                <div class="partner-card">
-                    <div class="partner-icon">🏋️</div>
-                    <h4>Elite Gyms</h4>
-                    <p>Access premium fitness centers in your city.</p>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-icon">🧘</div>
-                    <h4>Yoga Studios</h4>
-                    <p>Practice with certified instructors in serene environments.</p>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-icon">💃</div>
-                    <h4>Dance Academies</h4>
-                    <p>Join vibrant dance communities and learn from the best.</p>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-icon">👨‍🍳</div>
-                    <h4>Cooking Schools</h4>
-                    <p>Master new cuisines with hands-on cooking classes.</p>
+            <div class="download-hero">
+                <div class="download-content-wrapper">
+                    <div class="download-text-content">
+                        <span class="section-tag">Join Thousands of Members</span>
+                        <h2>Your Fitness Journey Starts Here</h2>
+                        <p class="download-description">Browse hundreds of classes, book instantly, and explore new experiences. From morning yoga to evening dance sessions—find what moves you.</p>
+                        
+                        <div class="download-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">1000+</div>
+                                <div class="stat-label">Active Members</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label">Partner Studios</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">4.8★</div>
+                                <div class="stat-label">User Rating</div>
+                            </div>
+                        </div>
+
+                        <div class="app-download-buttons">
+                            <a href="https://apps.apple.com/us/app/corerushfit/id6755691830" class="app-download-btn ios-btn" target="_blank">
+                                <svg class="app-store-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" fill="currentColor"/>
+                                </svg>
+                                <div class="app-download-text">
+                                    <span class="app-download-label">Download on the</span>
+                                    <span class="app-download-store">App Store</span>
+                                </div>
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=fit.corerush.core_rush_mobile" class="app-download-btn android-btn" target="_blank">
+                                <svg class="play-store-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 20.5v-17c0-.59.34-1.11.84-1.35L13.69 12l-9.85 9.85c-.5-.24-.84-.76-.84-1.35zm13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27zm-4.95-4.95l-2.27-2.27L6.05 2.66l10.76 6.51zm4.26-4.26l-2.25 1.62-2.5-2.5 2.5-2.5 2.25 1.62c.67.48 1.07 1.25 1.07 2.13 0 .88-.4 1.65-1.07 2.13z" fill="currentColor"/>
+                                </svg>
+                                <div class="app-download-text">
+                                    <span class="app-download-label">Get it on</span>
+                                    <span class="app-download-store">Google Play</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="download-visual">
+                        <div class="phone-mockup">
+                            <div class="phone-screen">
+                                <div class="screen-content">
+                                    <div class="app-preview-header"></div>
+                                    <div class="app-preview-cards">
+                                        <div class="preview-card"></div>
+                                        <div class="preview-card"></div>
+                                        <div class="preview-card"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
+    <!-- For Studios Section -->
+    <section id="studios" class="section">
         <div class="container">
             <div class="contact-container">
                 <div class="contact-content">
-                    <span class="section-tag">Early Access</span>
-                    <h2>Sign Up for <span class="highlight">Early Access</span></h2>
-                    <p>Be the first to experience the new way to discover and book classes. Early bird offers for first subscribers!</p>
+                    <span class="section-tag">Partner With Us</span>
+                    <h2>Join Our <span class="highlight">Studio Network</span></h2>
+                    <p>Are you a studio or gym owner? Partner with CoreRush.Fit to reach more customers and grow your business. Join hundreds of studios already on our platform.</p>
                     
                     <div class="contact-benefits">
                         <div class="benefit">
                             <div class="benefit-icon">✅</div>
-                            <span>Exclusive Launch Benefits</span>
+                            <span>Reach More Customers</span>
                         </div>
                         <div class="benefit">
                             <div class="benefit-icon">✅</div>
-                            <span>Unlimited Classes</span>
+                            <span>Easy Booking Management</span>
                         </div>
                         <div class="benefit">
                             <div class="benefit-icon">✅</div>
-                            <span>Partner Studio Access</span>
+                            <span>Marketing Support</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="contact-form">
-                    <form action="https://formspree.io/f/mzzgdwbj" method="POST">
-                        <div class="form-group">
-                            <input name="full_name" type="text" placeholder="Your Full Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input name="email" type="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input name="phone" placeholder="Your Phone Number" pattern="[0-9]{10}" required>
-                        </div>
-                        <button type="submit" class="btn-primary full-width">Sign Up for Early Access</button>
-                    </form>
+                <div class="studio-contact-card">
+                    <div class="contact-card-icon">📧</div>
+                    <h3>Get in Touch</h3>
+                    <p>Interested in partnering with us? Send us an email and we'll get back to you within 24 hours.</p>
+                    <a href="mailto:support@corerush.fit" class="contact-email-btn">
+                        <span>support@corerush.fit</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
@@ -275,19 +310,18 @@
                     <div class="footer-column">
                         <h4>Explore</h4>
                         <a href="#classes">Classes</a>
-                        <a href="#partners">Studios & Gyms</a>
                         <a href="#how-it-works">How It Works</a>
                     </div>
                     <div class="footer-column">
                         <h4>Company</h4>
                         <a href="#about">About Us</a>
-                        <a href="#partners">Our Partners</a>
+                        <a href="#studios">For Studios</a>
                         <a href="privacy-policy.html">Privacy Policy</a>
-                        <a href="#contact">Contact</a>
                     </div>
                     <div class="footer-column">
                         <h4>Connect</h4>
                         <a href="https://instagram.com/corerush.fit" target="_blank">Instagram</a>
+                        <a href="#download">Download App</a>
                     </div>
                 </div>
             </div>
