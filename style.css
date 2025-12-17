@@ -170,6 +170,13 @@ body {
     font-weight: 700;
     color: var(--primary-orange);
     letter-spacing: -0.02em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.logo:hover {
+    opacity: 0.8;
 }
 
 .nav-links {
@@ -1205,6 +1212,35 @@ body {
 @media (max-width: 768px) {
     html {
         scroll-padding-top: 6rem;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero {
+        order: 1;
+    }
+
+    #download {
+        order: 2;
+    }
+
+    #how-it-works {
+        order: 3;
+    }
+
+    #classes {
+        order: 4;
+    }
+
+    #studios {
+        order: 5;
+    }
+
+    .footer {
+        order: 6;
     }
 
     .beta-banner {
