@@ -846,7 +846,13 @@ body {
 }
 
 .benefit-icon {
-    font-size: 1.25rem;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: var(--primary-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .benefit span {
