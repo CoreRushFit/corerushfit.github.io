@@ -208,16 +208,21 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 12rem 0 2rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
     background: var(--background-default);
     overflow: hidden;
     position: relative;
+    padding-top: 8rem;
+    padding-bottom: 2rem;
 }
 
 .hero-container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
+    width: 100%;
 }
 
 .hero-content {
@@ -225,7 +230,7 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
-    min-height: 600px;
+    min-height: calc(100vh - 10rem);
 }
 
 .hero-text {
@@ -266,12 +271,16 @@ body {
 
 /* Scroll Indicator */
 .scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    padding: 0rem;
     text-align: center;
+    z-index: 10;
 }
 
 .scroll-mouse {
@@ -480,52 +489,31 @@ body {
     line-height: 1.6;
 }
 
-/* Features Grid */
-.features-grid {
+/* About Content */
+.about-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.feature-card {
-    background: white;
-    padding: 2.5rem;
-    border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-soft);
-    transition: var(--transition);
+.about-item {
     text-align: center;
 }
 
-.feature-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-medium);
-}
-
-.feature-number {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    background: var(--gradient-primary);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.about-item h3 {
+    font-size: 1.5rem;
     font-weight: 700;
-    font-size: 1.25rem;
-    margin: 0 auto 1.5rem;
-}
-
-.feature-card h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 1rem;
+    letter-spacing: -0.01em;
 }
 
-.feature-card p {
+.about-item p {
     color: var(--text-secondary);
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 1.05rem;
 }
 
 /* Steps Grid */
@@ -547,30 +535,6 @@ body {
 .step-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-medium);
-}
-
-.step-visual {
-    display: inline-block;
-    margin-bottom: 1.5rem;
-}
-
-.step-number {
-    width: 60px;
-    height: 60px;
-    background: var(--primary-orange);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.5rem;
-    margin: 0 auto;
-}
-
-.step-icon {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
 }
 
 .step-card h3 {
@@ -610,6 +574,15 @@ body {
     font-size: 3rem;
     margin-bottom: 1.5rem;
     display: block;
+    text-align: center;
+}
+
+.class-mascot-image {
+    width: 120px;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 .class-card h3 {
@@ -1234,27 +1207,48 @@ body {
         scroll-padding-top: 6rem;
     }
 
+    .beta-banner {
+        padding: 0.75rem 0;
+    }
+
     .beta-banner-content {
         flex-direction: column;
-        gap: 0.5rem;
-        padding: 0.75rem 1rem;
+        gap: 0.25rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .beta-badge {
+        display: none;
     }
 
     .beta-banner-content p {
         font-size: 0.875rem;
+        margin: 0;
     }
 
     .navbar {
         top: 3.5rem;
+        border-top: none;
+    }
+
+    .nav-container {
+        padding: 1rem;
     }
 
     .hero {
-        padding: 6rem 0 4rem;
+        min-height: auto;
+        padding-top: 10rem;
+        padding-bottom: 2rem;
         margin-top: 0;
     }
-    
-    .nav-container {
-        padding: 1rem;
+
+    .hero-content {
+        min-height: auto;
+        gap: 2rem;
+    }
+
+    .scroll-indicator {
+        display: none;
     }
     
     .nav-links {
@@ -1314,12 +1308,12 @@ body {
         margin-bottom: 3rem;
     }
     
-    .features-grid,
+    .about-content,
     .steps-grid,
     .classes-grid,
     .partners-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 2rem;
     }
     
     .footer-content {
