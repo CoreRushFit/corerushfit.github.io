@@ -1206,6 +1206,7 @@ body {
 
     .studio-contact-card {
         margin: 0 auto;
+        max-width: 100%;
     }
 
     .download-content-wrapper {
@@ -1331,8 +1332,24 @@ body {
         height: 480px;
     }
 
+    .contact-content {
+        text-align: center;
+    }
+
+    .contact-benefits {
+        align-items: flex-start;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .benefit {
+        justify-content: flex-start;
+    }
+
     .studio-contact-card {
         padding: 2rem;
+        margin: 0 auto;
+        max-width: 100%;
     }
     
     .hero-tag {
