@@ -928,6 +928,45 @@ body {
     transform: translateX(4px);
 }
 
+.contact-methods-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.contact-method-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: var(--gradient-primary);
+    color: var(--text-inverse);
+    border-radius: var(--border-radius-full);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.125rem;
+    transition: var(--transition);
+    box-shadow: var(--shadow-button);
+    width: 100%;
+}
+
+.contact-method-btn:hover {
+    background: var(--gradient-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-button-hover);
+}
+
+.contact-method-btn svg {
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.contact-method-btn:hover svg {
+    transform: scale(1.1);
+}
+
 .app-download-btn {
     display: flex;
     align-items: center;
@@ -1350,6 +1389,15 @@ body {
         padding: 2rem;
         margin: 0 auto;
         max-width: 100%;
+    }
+    
+    .contact-methods-container {
+        gap: 0.75rem;
+    }
+    
+    .contact-method-btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
     }
     
     .hero-tag {
