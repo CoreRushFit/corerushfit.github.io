@@ -21,18 +21,21 @@
         // Redirect logic
         document.addEventListener('DOMContentLoaded', function () {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            var isAndroid = /android/i.test(userAgent);
+            var isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+
             var messageElement = document.getElementById('redirect-message');
             var androidUrl = "https://play.google.com/store/apps/details?id=fit.corerush.core_rush_mobile";
             var iosUrl = "https://apps.apple.com/us/app/corerushfit/id6755691830";
 
             if (isAndroid) {
                 if (messageElement) {
-                    messageElement.innerHTML = 'Redirecting to Google Play...<br>If you are not redirected automatically, please click the links below.';
+                    messageElement.innerHTML = 'Redirecting to Google Play...<br>If you are not redirected automatically, click the links below.';
                 }
                 window.location.href = androidUrl;
             } else if (isIOS) {
                 if (messageElement) {
-                    messageElement.innerHTML = 'Redirecting to App Store...<br>If you are not redirected automatically, please click the links below.';
+                    messageElement.innerHTML = 'Redirecting to App Store...<br>If you are not redirected automatically, click the links below.';
                 }
                 window.location.href = iosUrl;
             }
