@@ -1,0 +1,25 @@
+# CoreRush.Fit
+
+CoreRush.Fit is a fitness and lifestyle booking platform in India. Users can discover, compare, and book classes across trusted partner studios using a flexible credits-based membership.
+
+## Primary URLs
+- Home: https://corerush.fit/
+- Download App: https://corerush.fit/download.html
+- Terms of Service: https://corerush.fit/terms.html
+- Privacy Policy: https://corerush.fit/privacy-policy.html
+- Account Deactivation: https://corerush.fit/deactivate.html
+
+## Mobile Apps
+- iOS: https://apps.apple.com/us/app/corerushfit/id6755691830
+- Android: https://play.google.com/store/apps/details?id=fit.corerush.core_rush_mobile
+
+## Brand And Contact
+- Brand: CoreRush.Fit
+- Instagram: https://instagram.com/corerush.fit
+- Support: mailto:support@corerush.fit
+
+## Product Scope
+- Fitness class discovery by location, schedule, and class type.
+- Instant booking across partner studios.
+- Credits-based membership access.
+- Class categories include fitness, dance, yoga/pilates, and recovery.

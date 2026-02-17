@@ -5,6 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download CoreRush.Fit</title>
+    <meta name="description"
+        content="Download CoreRush.Fit to book fitness, yoga, dance, and recovery classes near you with a flexible credits-based membership.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://corerush.fit/download.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CoreRush.Fit">
+    <meta property="og:title" content="Download CoreRush.Fit">
+    <meta property="og:description"
+        content="Get the CoreRush.Fit app and book fitness, yoga, dance, and recovery classes near you.">
+    <meta property="og:url" content="https://corerush.fit/download.html">
+    <meta property="og:image" content="https://corerush.fit/assets/logo.png">
+    <meta property="og:image:alt" content="CoreRush.Fit logo">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Download CoreRush.Fit">
+    <meta name="twitter:description"
+        content="Get the CoreRush.Fit app and book fitness, yoga, dance, and recovery classes near you.">
+    <meta name="twitter:image" content="https://corerush.fit/assets/logo.png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -18,26 +35,91 @@
     </script>
 
     <script>
-        // Redirect logic
+        // Redirect after GA event callback to improve tracking reliability.
         document.addEventListener('DOMContentLoaded', function () {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
             var isAndroid = /android/i.test(userAgent);
             var isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+            var params = new URLSearchParams(window.location.search);
+            var noRedirect = params.get('no_redirect') === '1';
+            var gaDebug = params.get('ga_debug') === '1';
 
             var messageElement = document.getElementById('redirect-message');
             var androidUrl = "https://play.google.com/store/apps/details?id=fit.corerush.core_rush_mobile";
             var iosUrl = "https://apps.apple.com/us/app/corerushfit/id6755691830";
 
+            var targetUrl = null;
+            var platform = null;
+
             if (isAndroid) {
+                targetUrl = androidUrl;
+                platform = 'android';
                 if (messageElement) {
                     messageElement.innerHTML = 'Redirecting to Google Play...<br>If you are not redirected automatically, click the links below.';
                 }
-                window.location.href = androidUrl;
             } else if (isIOS) {
+                targetUrl = iosUrl;
+                platform = 'ios';
                 if (messageElement) {
                     messageElement.innerHTML = 'Redirecting to App Store...<br>If you are not redirected automatically, click the links below.';
                 }
-                window.location.href = iosUrl;
+            }
+
+            if (!targetUrl) {
+                return;
+            }
+
+            var redirected = false;
+            function goToStore() {
+                if (redirected) {
+                    return;
+                }
+                redirected = true;
+                if (gaDebug) {
+                    console.log('[download] redirecting to', targetUrl);
+                }
+                window.location.href = targetUrl;
+            }
+
+            if (noRedirect) {
+                if (messageElement) {
+                    messageElement.innerHTML = 'Debug mode: auto-redirect disabled. Use links below to continue.';
+                }
+                if (gaDebug) {
+                    console.log('[download] no_redirect=1 enabled');
+                }
+                if (typeof gtag === 'function') {
+                    gtag('event', 'download_redirect_debug', {
+                        platform: platform,
+                        destination: targetUrl
+                    });
+                }
+                return;
+            }
+
+            var fallbackTimer = setTimeout(goToStore, 1200);
+
+            if (typeof gtag === 'function') {
+                if (gaDebug) {
+                    console.log('[download] sending GA event download_redirect', platform);
+                }
+                gtag('event', 'download_redirect', {
+                    platform: platform,
+                    destination: targetUrl,
+                    event_callback: function () {
+                        if (gaDebug) {
+                            console.log('[download] GA event callback fired');
+                        }
+                        clearTimeout(fallbackTimer);
+                        goToStore();
+                    },
+                    event_timeout: 1200
+                });
+            } else {
+                if (gaDebug) {
+                    console.log('[download] gtag missing, using direct redirect');
+                }
+                goToStore();
             }
         });
     </script>
@@ -55,6 +137,13 @@
             <div class="download-hero">
                 <div class="download-content-wrapper" style="display: block; width: 100%; text-align: center;">
                     <div class="download-text-content" style="margin: 0 auto; max-width: 600px;">
+                        <span class="section-tag">Get the app</span>
+                        <h1 style="font-size: clamp(2rem, 5vw, 3rem); margin: 1rem 0;">
+                            Book fitness, yoga, dance, and recovery classes near you.
+                        </h1>
+                        <p class="download-description" style="margin-bottom: 1.25rem;">
+                            One flexible, credits-based membership across trusted partner studios. No long-term lock-in.
+                        </p>
                         <p class="download-description" id="redirect-message"
                             style="font-size: 1.25rem; margin-bottom: 2rem;">
                             If you are not redirected automatically, please click the links below to download the app.
@@ -77,7 +166,7 @@
                                 class="app-download-btn android-btn" target="_blank">
                                 <svg class="play-store-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                     <path
-                                        d="M3,20.5V3.5C3,2.91 3.34,2.39 3.34,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"
+                                        d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"
                                         fill="currentColor" />
                                 </svg>
                                 <div class="app-download-text">
