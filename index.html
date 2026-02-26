@@ -63,7 +63,11 @@
         <div class="nav-container">
             <a href="/" class="logo">CoreRush.Fit</a>
 
-            <div class="nav-links">
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="nav-links" id="nav-links">
                 <a href="#classes">Classes</a>
                 <a href="#online-classes">Online</a>
                 <a href="#stories">Stories</a>
@@ -72,6 +76,7 @@
             </div>
         </div>
     </nav>
+    <div class="menu-overlay" id="menu-overlay"></div>
 
     <!-- Hero Section -->
     <header class="hero reveal" style="--delay: 0s;">
@@ -472,15 +477,52 @@
             });
 
             var testimonialsButton = document.getElementById('testimonials-toggle');
-            if (!testimonialsButton) {
-                return;
+            if (testimonialsButton) {
+                testimonialsButton.addEventListener('click', function () {
+                    var isExpanded = document.body.classList.toggle('testimonials-expanded');
+                    testimonialsButton.setAttribute('aria-expanded', String(isExpanded));
+                    testimonialsButton.textContent = isExpanded ? 'Show fewer stories' : 'View more stories';
+                });
             }
 
-            testimonialsButton.addEventListener('click', function () {
-                var isExpanded = document.body.classList.toggle('testimonials-expanded');
-                testimonialsButton.setAttribute('aria-expanded', String(isExpanded));
-                testimonialsButton.textContent = isExpanded ? 'Show fewer stories' : 'View more stories';
-            });
+            // Mobile menu
+            var menuBtn = document.getElementById('mobile-menu-btn');
+            var navLinks = document.getElementById('nav-links');
+            var overlay = document.getElementById('menu-overlay');
+            var scrollY = 0;
+
+            function openMenu() {
+                scrollY = window.scrollY;
+                menuBtn.classList.add('active');
+                navLinks.classList.add('open');
+                overlay.classList.add('open');
+                menuBtn.setAttribute('aria-expanded', 'true');
+                document.body.classList.add('menu-open');
+                document.body.style.top = '-' + scrollY + 'px';
+            }
+
+            function closeMenu() {
+                menuBtn.classList.remove('active');
+                navLinks.classList.remove('open');
+                overlay.classList.remove('open');
+                menuBtn.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('menu-open');
+                document.body.style.top = '';
+                window.scrollTo(0, scrollY);
+            }
+
+            if (menuBtn && navLinks && overlay) {
+                menuBtn.addEventListener('click', function () {
+                    navLinks.classList.contains('open') ? closeMenu() : openMenu();
+                });
+                overlay.addEventListener('click', closeMenu);
+                navLinks.querySelectorAll('a').forEach(function (link) {
+                    link.addEventListener('click', closeMenu);
+                });
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && navLinks.classList.contains('open')) closeMenu();
+                });
+            }
         })();
     </script>
 </body>
