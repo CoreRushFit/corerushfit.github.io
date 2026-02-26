@@ -453,7 +453,7 @@ a {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .partner-proof-card {
@@ -481,6 +481,7 @@ a {
     flex-wrap: wrap;
     gap: 0.8rem;
     justify-content: center;
+    margin-bottom: 3rem;
 }
 
 .partner-marquee span {
@@ -785,6 +786,12 @@ body.testimonials-expanded .testimonials-more {
     border-radius: var(--radius-lg);
     border: 1px solid var(--line);
     box-shadow: var(--shadow-soft);
+}
+
+.studio-contact-card--centered {
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .studio-contact-card h3 {
